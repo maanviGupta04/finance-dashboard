@@ -1,0 +1,253 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+  /* background: pink; */
+  background: linear-gradient(135deg, #95a3e1, #ab8ec8);
+  font-family: 'Poppins', sans-serif;;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 0;
+}
+
+header select#role {
+  padding: 8px 12px;              
+  border-radius: 8px;            
+  border: 1px solid #ccc;         
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+header select#role:focus {
+  border-color: #007bff;          
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.dark {
+  background: #121212;
+  color: #ffffff;  
+}
+
+.dark h1,
+.dark span {
+  color: #ffffff;
+}
+
+.dark p,
+.dark h3{
+  color: #121212;
+}
+
+.dark .card,
+.dark #transactions .row,
+.dark canvas {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark select,
+.dark input {
+  background: #1e1e1e;
+  color: #0b0b0b;
+  border: 1px solid #555;
+}
+
+.dark #filter{
+  color: #f1f1f1;
+}
+
+.dark canvas {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+
+#darkModeBtn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+}
+
+.dark #darkModeBtn {
+  background: #f1f1f1;
+  color: black;
+}
+
+#transactions .header {
+  font-weight: bold;
+  background: #eaeaea;
+}
+
+
+#cards {
+  display: flex;
+  justify-content: center;  
+  gap: 20px;                 
+  flex-wrap: wrap;           
+  margin-top: 20px;
+}
+
+.card {
+  min-width: 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#transactions .row {
+  display: flex;
+  background: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#transactions .row span {
+  flex: 1;              
+  text-align: center;   
+}
+
+.box {
+  display: flex;                
+  gap: 10px;                    
+  margin-bottom: 15px;          
+  flex-wrap: wrap;              
+  align-items: center;           
+  
+}
+
+.box input,
+.box select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.box input:focus,
+.box select:focus {
+  border-color: #ff5e00;      
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+section button#addBtn {
+  margin-top: 10px;       
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+section button#addBtn:hover {
+  background-color: #0056b3;
+}
+
+.put{
+  height: 900px;
+  width: 100%;
+  background-color: blanchedalmond
+
+
+}
+
+.charts {
+  display: flex;
+  height: 700px;
+  justify-content: center;  
+  align-items: center;       
+  gap: 60px;
+  width: 100%;               
+  margin: 40px auto;         
+  flex-wrap: wrap;           
+  background-color:blanchedalmond;
+  
+}
+
+canvas {
+  flex: 1;                 
+  max-width: 500px;         
+  width: 100%;              
+  height: 500px !important; 
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#insights {
+  text-align: center;
+}
+
+#insights h3{
+   font-size: 2rem;
+}
+#insights p{
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+/* Transistions */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+#transactions .row {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#transactions .row:hover {
+  transform: scale(1.02);
+  background: #f1f1f1;
+}
+
+.dark #transactions .row:hover {
+  background: #2a2a2a;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.card,
+#transactions .row,
+canvas {
+  transition: background 0.4s ease, color 0.4s ease;
+}
