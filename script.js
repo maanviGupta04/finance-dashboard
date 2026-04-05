@@ -140,11 +140,11 @@ function renderCharts() {
   const amounts = state.transactions.map(t => t.amount);
   const categories = state.transactions.map(t => t.category);
 
-  //graph
+  // ✅ destroy old charts (VERY IMPORTANT)
   if (lineChart) lineChart.destroy();
   if (pieChart) pieChart.destroy();
 
-
+  // ✅ LINE CHART
   lineChart = new Chart(ctx1, {
     type: "line",
     data: {
@@ -160,7 +160,7 @@ function renderCharts() {
           labels: {
             color: textColor,
             font: {
-              size: 26,
+              size: 20,
               weight: 'bold'
             }
           }
@@ -171,7 +171,7 @@ function renderCharts() {
           ticks: {
             color: textColor,
             font: {
-              size: 24,
+              size: 18,
               weight: 'bold'
             }
 
@@ -185,7 +185,7 @@ function renderCharts() {
           ticks: {
             color: textColor,
             font: {
-              size: 25,
+              size: 17,
               weight: 'bold'
             }
           },
@@ -197,7 +197,7 @@ function renderCharts() {
     }
   });
 
-  // PIE CHART
+  // ✅ PIE CHART
   pieChart = new Chart(ctx2, {
     type: "pie",
     data: {
