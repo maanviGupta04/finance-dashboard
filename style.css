@@ -165,17 +165,16 @@ section button#addBtn:hover {
   background-color: #0056b3;
 }
 
-.put{
-  height: 900px;
+.put {
   width: 100%;
-  background-color: blanchedalmond
-
-
+  background-color: blanchedalmond;
+  padding: 20px 0;
+  margin-top: 20px;
 }
 
 .charts {
   display: flex;
-  height: 700px;
+  height: auto !important;
   justify-content: center;  
   align-items: center;       
   gap: 60px;
@@ -183,6 +182,7 @@ section button#addBtn:hover {
   margin: 40px auto;         
   flex-wrap: wrap;           
   background-color:blanchedalmond;
+  padding: 50px 0px;
   
 }
 
@@ -250,4 +250,56 @@ body {
 #transactions .row,
 canvas {
   transition: background 0.4s ease, color 0.4s ease;
+}
+/* responsive */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  #cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #transactions .row {
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+  }
+
+  #transactions .row span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .charts {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  canvas {
+    max-width: 100%;
+  }
 }
